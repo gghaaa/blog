@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+  h1= title
+  input(type='button', value='create', id='createButton')
+
+  script.
+    (function(){
+      console.log('test')
+      var createButton = document.getElementById('createButton');
+      createButton.addEventListener('click', function() {
+        location.href = 'blog/create';
+      }, false);
+    }());
